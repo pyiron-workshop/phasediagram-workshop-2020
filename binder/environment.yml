@@ -1,0 +1,10 @@
+channels:
+- conda-forge
+dependencies:
+- pyiron =0.3.9
+- lammps
+- nglview
+- seaborn
+- sqsgenerator
+- phonopy
+- sphinxdft
