@@ -1,0 +1,33 @@
+name: Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      CONDA_PREFIX: /usr/share/miniconda/
+      GPAW_SETUP_PATH: /usr/share/miniconda/share/gpaw
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup conda
+      uses: s-weigand/setup-conda@v1
+      with:
+        update-conda: true
+        python-version: 3.8
+        conda-channels: anaconda, conda-forge
+    - run: conda config --set always_yes yes --set changeps1 no
+    - run: conda env update --name root --file binder/environment.yml
+    - run: bash binder/postBuild
+    - run: conda install -c conda-forge libsass jupytext sphinx=2.4.4 pybtex jupyter_sphinx sphinxcontrib-bibtex markdown-it-py myst-parser nest-asyncio async_generator nbclient nbdime sphinx-copybutton pydata-sphinx-theme matplotlib=3.2.1
+    - run: pip install git+https://github.com/ExecutableBookProject/jupyter-book
+    - run: pip install git+https://github.com/pyiron/pyiron
+    - run: jupyter-book build . --path-output public
+    - run: mv public/_build/html public_html
+    - run: touch public_html/.nojekyll
