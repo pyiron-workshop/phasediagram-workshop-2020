@@ -1,0 +1,128 @@
+Traceback (most recent call last):
+  File "/usr/share/miniconda/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/usr/share/miniconda/lib/python3.8/site-packages/nbclient/client.py", line 1087, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/share/miniconda/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/usr/share/miniconda/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/share/miniconda/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/usr/share/miniconda/lib/python3.8/site-packages/nbclient/client.py", line 540, in async_execute
+    await self.async_execute_cell(
+  File "/usr/share/miniconda/lib/python3.8/site-packages/nbclient/client.py", line 832, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/usr/share/miniconda/lib/python3.8/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Import the Project object
+from pyiron import ____
+
+# Create a Project object instance for a project named atomistics
+pr = ____("simulations")
+
+# Create a cubic aluminum fcc structure
+al_fcc = pr.create_ase_bulk(____, _____=True)
+
+# Confirm the final structure has 4 atoms by calculating the length of the structure object
+____(al_fcc_repeated) == 4
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mPermissionError[0m                           Traceback (most recent call last)
+[0;32m<ipython-input-1-f6ca9850b066>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0;31m# Import the Project object[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0;32mfrom[0m [0mpyiron[0m [0;32mimport[0m [0m____[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0;31m# Create a Project object instance for a project named atomistics[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mpr[0m [0;34m=[0m [0m____[0m[0;34m([0m[0;34m"simulations"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      2[0m [0m__all__[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m      3[0m [0;34m[0m[0m
+[0;32m----> 4[0;31m [0;32mfrom[0m [0mpyiron[0m[0;34m.[0m[0mproject[0m [0;32mimport[0m [0mProject[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      5[0m [0;32mfrom[0m [0mpyiron[0m[0;34m.[0m[0matomistics[0m[0;34m.[0m[0mstructure[0m[0;34m.[0m[0matoms[0m [0;32mimport[0m [0mase_to_pyiron[0m[0;34m,[0m [0mpyiron_to_ase[0m[0;34m,[0m [0mAtoms[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      6[0m [0;32mfrom[0m [0mpyiron[0m[0;34m.[0m[0matomistics[0m[0;34m.[0m[0mstructure[0m[0;34m.[0m[0mgenerator[0m [0;32mimport[0m [0mcreate_surface[0m[0;34m,[0m [0mcreate_ase_bulk[0m[0;34m,[0m [0mcreate_structure[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron/project.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      8[0m [0;32mfrom[0m [0mstring[0m [0;32mimport[0m [0mpunctuation[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      9[0m [0;32mfrom[0m [0mshutil[0m [0;32mimport[0m [0mcopyfile[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 10[0;31m [0;32mfrom[0m [0mpyiron_base[0m [0;32mimport[0m [0mSettings[0m[0;34m,[0m [0mProjectHDFio[0m[0;34m,[0m [0mJobType[0m[0;34m,[0m [0mJobTypeChoice[0m[0;34m,[0m [0mProject[0m [0;32mas[0m [0mProjectCore[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     11[0m [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     12[0m     [0;32mfrom[0m [0mpyiron_base[0m [0;32mimport[0m [0mProjectGUI[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/__init__.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      6[0m [0;32mfrom[0m [0mpyiron_base[0m[0;34m.[0m[0mgeneric[0m[0;34m.[0m[0mhdfio[0m [0;32mimport[0m [0mFileHDFio[0m[0;34m,[0m [0mProjectHDFio[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      7[0m [0;32mfrom[0m [0mpyiron_base[0m[0;34m.[0m[0mgeneric[0m[0;34m.[0m[0minputlist[0m [0;32mimport[0m [0mInputList[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 8[0;31m [0;32mfrom[0m [0mpyiron_base[0m[0;34m.[0m[0mgeneric[0m[0;34m.[0m[0mparameters[0m [0;32mimport[0m [0mGenericParameters[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      9[0m [0;32mfrom[0m [0mpyiron_base[0m[0;34m.[0m[0mgeneric[0m[0;34m.[0m[0mtemplate[0m [0;32mimport[0m [0mPyironObject[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     10[0m [0;32mfrom[0m [0mpyiron_base[0m[0;34m.[0m[0mjob[0m[0;34m.[0m[0mexecutable[0m [0;32mimport[0m [0mExecutable[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/generic/parameters.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     28[0m [0m__date__[0m [0;34m=[0m [0;34m"Sep 1, 2017"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     29[0m [0;34m[0m[0m
+[0;32m---> 30[0;31m [0ms[0m [0;34m=[0m [0mSettings[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     31[0m [0;34m[0m[0m
+[1;32m     32[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/settings/generic.py[0m in [0;36m__call__[0;34m(cls, *args, **kwargs)[0m
+[1;32m     47[0m             [0mcls[0m[0;34m.[0m[0m_instances[0m[0;34m[[0m[0mcls[0m[0;34m][0m [0;34m=[0m [0msuper[0m[0;34m([0m[0mSingleton[0m[0;34m,[0m [0mcls[0m[0;34m)[0m[0;34m.[0m[0m__call__[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     48[0m         [0;32mif[0m [0mcls[0m [0;32mnot[0m [0;32min[0m [0mcls[0m[0;34m.[0m[0m_instances[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 49[0;31m             [0mcls[0m[0;34m.[0m[0m_instances[0m[0;34m[[0m[0mcls[0m[0;34m][0m [0;34m=[0m [0msuper[0m[0;34m([0m[0mSingleton[0m[0;34m,[0m [0mcls[0m[0;34m)[0m[0;34m.[0m[0m__call__[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     50[0m         [0;32mreturn[0m [0mcls[0m[0;34m.[0m[0m_instances[0m[0;34m[[0m[0mcls[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m     51[0m [0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/settings/generic.py[0m in [0;36m__init__[0;34m(self, config)[0m
+[1;32m    114[0m         [0mself[0m[0;34m.[0m[0m_database_is_disabled[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_configuration[0m[0;34m[[0m[0;34m"disable_database"[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m    115[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0mdatabase_is_disabled[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 116[0;31m             self._configuration = self.convert_database_config(
+[0m[1;32m    117[0m                 [0mconfig[0m[0;34m=[0m[0mself[0m[0;34m.[0m[0m_configuration[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    118[0m             )
+
+[0;32m/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/settings/generic.py[0m in [0;36mconvert_database_config[0;34m(config)[0m
+[1;32m    491[0m                 [0mos[0m[0;34m.[0m[0mpath[0m[0;34m.[0m[0mdirname[0m[0;34m([0m[0msql_file[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    492[0m             ):
+[0;32m--> 493[0;31m                 [0mos[0m[0;34m.[0m[0mmakedirs[0m[0;34m([0m[0mos[0m[0;34m.[0m[0mpath[0m[0;34m.[0m[0mdirname[0m[0;34m([0m[0msql_file[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    494[0m             config[
+[1;32m    495[0m                 [0;34m"sql_connection_string"[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/os.py[0m in [0;36mmakedirs[0;34m(name, mode, exist_ok)[0m
+[1;32m    211[0m     [0;32mif[0m [0mhead[0m [0;32mand[0m [0mtail[0m [0;32mand[0m [0;32mnot[0m [0mpath[0m[0;34m.[0m[0mexists[0m[0;34m([0m[0mhead[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    212[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 213[0;31m             [0mmakedirs[0m[0;34m([0m[0mhead[0m[0;34m,[0m [0mexist_ok[0m[0;34m=[0m[0mexist_ok[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    214[0m         [0;32mexcept[0m [0mFileExistsError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    215[0m             [0;31m# Defeats race condition when another thread created the path[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/os.py[0m in [0;36mmakedirs[0;34m(name, mode, exist_ok)[0m
+[1;32m    211[0m     [0;32mif[0m [0mhead[0m [0;32mand[0m [0mtail[0m [0;32mand[0m [0;32mnot[0m [0mpath[0m[0;34m.[0m[0mexists[0m[0;34m([0m[0mhead[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    212[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 213[0;31m             [0mmakedirs[0m[0;34m([0m[0mhead[0m[0;34m,[0m [0mexist_ok[0m[0;34m=[0m[0mexist_ok[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    214[0m         [0;32mexcept[0m [0mFileExistsError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    215[0m             [0;31m# Defeats race condition when another thread created the path[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/os.py[0m in [0;36mmakedirs[0;34m(name, mode, exist_ok)[0m
+[1;32m    211[0m     [0;32mif[0m [0mhead[0m [0;32mand[0m [0mtail[0m [0;32mand[0m [0;32mnot[0m [0mpath[0m[0;34m.[0m[0mexists[0m[0;34m([0m[0mhead[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    212[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 213[0;31m             [0mmakedirs[0m[0;34m([0m[0mhead[0m[0;34m,[0m [0mexist_ok[0m[0;34m=[0m[0mexist_ok[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    214[0m         [0;32mexcept[0m [0mFileExistsError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    215[0m             [0;31m# Defeats race condition when another thread created the path[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/os.py[0m in [0;36mmakedirs[0;34m(name, mode, exist_ok)[0m
+[1;32m    211[0m     [0;32mif[0m [0mhead[0m [0;32mand[0m [0mtail[0m [0;32mand[0m [0;32mnot[0m [0mpath[0m[0;34m.[0m[0mexists[0m[0;34m([0m[0mhead[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    212[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 213[0;31m             [0mmakedirs[0m[0;34m([0m[0mhead[0m[0;34m,[0m [0mexist_ok[0m[0;34m=[0m[0mexist_ok[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    214[0m         [0;32mexcept[0m [0mFileExistsError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    215[0m             [0;31m# Defeats race condition when another thread created the path[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/share/miniconda/lib/python3.8/os.py[0m in [0;36mmakedirs[0;34m(name, mode, exist_ok)[0m
+[1;32m    221[0m             [0;32mreturn[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    222[0m     [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 223[0;31m         [0mmkdir[0m[0;34m([0m[0mname[0m[0;34m,[0m [0mmode[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    224[0m     [0;32mexcept[0m [0mOSError[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    225[0m         [0;31m# Cannot rely on checking for EEXIST, since the operating system[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mPermissionError[0m: [Errno 13] Permission denied: '/srv/conda'
+PermissionError: [Errno 13] Permission denied: '/srv/conda'
+
