@@ -4,7 +4,7 @@ logo: images/logo_dark.png
 
 repository:
     url                       : https://github.com/pyiron/phasediagram-workshop-2020
-    path_to_book              : "book/"
+    path_to_book              : "./"
 
 launch_buttons:
   binderhub_url               : https://mybinder.org
