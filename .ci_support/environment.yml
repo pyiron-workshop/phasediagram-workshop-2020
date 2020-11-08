@@ -1,6 +1,7 @@
 channels:
   - conda-forge
 dependencies:
+  - cython
   - libsass
   - jupytext
   - sphinx =2.4.4
