@@ -2,6 +2,9 @@ title: Software Tools from Atomistics to Phase Diagrams
 author: Jan Janssen
 logo: images/logo_dark.png
 
+execute:
+  execute_notebooks           : off
+
 repository:
     url                       : https://github.com/pyiron/phasediagram-workshop-2020
     path_to_book              : ""

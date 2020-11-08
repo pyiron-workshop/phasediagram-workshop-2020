@@ -1,5 +1,9 @@
 - file: Introduction.md
-- file: 1_Atomistic_Structures
-- file: 2_Simulation_Codes
-- file: 3_Density_Functional_Theory
-- file: 4_Free_Energies
+- file: Atomisticstructures.md 
+- file: Exercise1
+- file: SimulationCodes.md 
+- file: Exercise2
+- file: DensityFunctionalTheory.md 
+- file: Exercise3
+- file: ThermodynamicProperties.md
+- file: Exercise4
