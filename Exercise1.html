@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Welcome to the Workshop: Software Tools from Atomistics to Phase Diagrams &#8212; Software Tools from Atomistics to Phase Diagrams</title>
+    <title>Exercise 1: Atomistic Structures &#8212; Software Tools from Atomistics to Phase Diagrams</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -54,8 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Welcome to the Workshop: Software Tools from Atomistics to Phase Diagrams" href="2_Simulation_Codes.html" />
-    <link rel="prev" title="Introduction" href="Introduction.html" />
+    <link rel="next" title="Simulation Codes" href="SimulationCodes.html" />
+    <link rel="prev" title="Atomistic Structures" href="Atomisticstructures.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -96,49 +96,44 @@
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Atomisticstructures.html">
+   Atomistic Structures
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Welcome to the Workshop: Software Tools from Atomistics to Phase Diagrams
+   Exercise 1: Atomistic Structures
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#day-1-atomistic-simulation">
-   Day 1 - atomistic simulation
+  <a class="reference internal" href="SimulationCodes.html">
+   Simulation Codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2_Simulation_Codes.html">
-   Welcome to the Workshop: Software Tools from Atomistics to Phase Diagrams
+  <a class="reference internal" href="Exercise2.html">
+   Exercise 2: Simulation Codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="2_Simulation_Codes.html#day-1-atomistic-simulation">
-   Day 1 - atomistic simulation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3_Density_Functional_Theory.html">
-   Welcome to the Workshop: Software Tools from Atomistics to Phase Diagrams
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3_Density_Functional_Theory.html#day-1-atomistic-simulation">
-   Day 1 - atomistic simulation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="3_Density_Functional_Theory.html#density-functional-theory">
+  <a class="reference internal" href="DensityFunctionalTheory.html">
    Density Functional Theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="4_Free_Energies.html">
-   Welcome to the Workshop: Software Tools from Atomistics to Phase Diagrams
+  <a class="reference internal" href="Exercise3.html">
+   Exercise 3: Density functional theory
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="4_Free_Energies.html#day-1-atomistic-simulation">
-   Day 1 - atomistic simulation
+  <a class="reference internal" href="ThermodynamicProperties.html">
+   Thermodynamic Properties
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise4.html">
+   Exercise 4: Thermodynamic Properties
   </a>
  </li>
 </ul>
@@ -183,7 +178,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/1_Atomistic_Structures.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Exercise1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -208,7 +203,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/pyiron/phasediagram-workshop-2020/master?urlpath=tree/1_Atomistic_Structures.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/pyiron/phasediagram-workshop-2020/master?urlpath=tree/Exercise1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -230,69 +225,57 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Welcome to the Workshop: Software Tools from Atomistics to Phase Diagrams
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#day-1-atomistic-simulation">
-   Day 1 - atomistic simulation
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-project-object">
+   The Project Object
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#getting-started">
-     Getting Started
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atomistic-structures">
+     Atomistic Structures
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-project-object">
-     The Project Object
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#atomistic-structures">
-       Atomistic Structures
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#replacing-atoms">
-       Replacing atoms
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#beyond-ase-atomic-neighbors">
-       Beyond ASE - Atomic Neighbors
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#special-quasi-random-structures">
-     Special Quasi-random Structures
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#replacing-atoms">
+     Replacing atoms
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#managing-your-pyiron-project">
-     Managing your pyiron project
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modify-sqs-calculation-job">
-     Modify SQS-calculation job
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#publications">
-     Publications
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#summary">
-     Summary
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#beyond-ase-atomic-neighbors">
+     Beyond ASE - Atomic Neighbors
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#special-quasi-random-structures">
+   Special Quasi-random Structures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#managing-your-pyiron-project">
+   Managing your pyiron project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modify-sqs-calculation-job">
+   Modify SQS-calculation job
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publications">
+   Publications
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
  </li>
 </ul>
 
@@ -305,18 +288,8 @@
         
               <div>
                 
-  <div class="section" id="welcome-to-the-workshop-software-tools-from-atomistics-to-phase-diagrams">
-<h1>Welcome to the Workshop: Software Tools from Atomistics to Phase Diagrams<a class="headerlink" href="#welcome-to-the-workshop-software-tools-from-atomistics-to-phase-diagrams" title="Permalink to this headline">¶</a></h1>
-<p>https://pyiron.org - https://www.mpie.de - https://workshop.materialsgenomefoundation.org</p>
-<ul class="simple">
-<li><p>Richard Otis (Materials Genome Foundation)</p></li>
-<li><p><strong>Jan Janssen</strong>, Tilmann Hickel, Jörg Neugebauer (Max-Planck-Institut für Eisenforschung)</p></li>
-<li><p>Brandon Bocklund and Zi-Kui Liu (Pennsylvania State University)</p></li>
-</ul>
-</div>
-<div class="section" id="day-1-atomistic-simulation">
-<h1>Day 1 - atomistic simulation<a class="headerlink" href="#day-1-atomistic-simulation" title="Permalink to this headline">¶</a></h1>
-<p>11:20-11:50 Interactive: <strong>Creating atomistic structures with pyiron</strong></p>
+  <div class="section" id="exercise-1-atomistic-structures">
+<h1>Exercise 1: Atomistic Structures<a class="headerlink" href="#exercise-1-atomistic-structures" title="Permalink to this headline">¶</a></h1>
 <p>The scope of this first exercise is to become familar with:</p>
 <ul class="simple">
 <li><p>the jupyter notebook environment,</p></li>
@@ -337,104 +310,6 @@
 <span class="c1"># The Project object instance, or Project for short </span>
 <span class="c1"># created a new folder in your current directory: </span>
 <span class="n">pr</span><span class="o">.</span><span class="n">path</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">PermissionError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">aa63684e7f2c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Import the Project object</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pyiron</span> <span class="kn">import</span> <span class="n">____</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Create a Project object instance for a project named atomistics</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">pr</span> <span class="o">=</span> <span class="n">____</span><span class="p">(</span><span class="s2">&quot;atomistics&quot;</span><span class="p">)</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pyiron</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">pyiron.project</span> <span class="kn">import</span> <span class="n">Project</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">pyiron.atomistics.structure.atoms</span> <span class="kn">import</span> <span class="n">ase_to_pyiron</span><span class="p">,</span> <span class="n">pyiron_to_ase</span><span class="p">,</span> <span class="n">Atoms</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">pyiron.atomistics.structure.generator</span> <span class="kn">import</span> <span class="n">create_surface</span><span class="p">,</span> <span class="n">create_ase_bulk</span><span class="p">,</span> <span class="n">create_structure</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pyiron</span><span class="o">/</span><span class="n">project</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">string</span> <span class="kn">import</span> <span class="n">punctuation</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">shutil</span> <span class="kn">import</span> <span class="n">copyfile</span>
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">pyiron_base</span> <span class="kn">import</span> <span class="n">Settings</span><span class="p">,</span> <span class="n">ProjectHDFio</span><span class="p">,</span> <span class="n">JobType</span><span class="p">,</span> <span class="n">JobTypeChoice</span><span class="p">,</span> <span class="n">Project</span> <span class="k">as</span> <span class="n">ProjectCore</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="kn">from</span> <span class="nn">pyiron_base</span> <span class="kn">import</span> <span class="n">ProjectGUI</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pyiron_base</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">pyiron_base.generic.hdfio</span> <span class="kn">import</span> <span class="n">FileHDFio</span><span class="p">,</span> <span class="n">ProjectHDFio</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">pyiron_base.generic.inputlist</span> <span class="kn">import</span> <span class="n">InputList</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">pyiron_base.generic.parameters</span> <span class="kn">import</span> <span class="n">GenericParameters</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">pyiron_base.generic.template</span> <span class="kn">import</span> <span class="n">PyironObject</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">pyiron_base.job.executable</span> <span class="kn">import</span> <span class="n">Executable</span>
-
-<span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">miniconda</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pyiron_base</span><span class="o">/</span><span class="n">generic</span><span class="o">/</span><span class="n">parameters</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="n">__date__</span> <span class="o">=</span> <span class="s2">&quot;Sep 1, 2017&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> 
-<span class="ne">---&gt; </span><span class="mi">30</span> <span class="n">s</span> <span class="o">=</span> <span class="n">Settings</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">31</span> 
-<span class="g g-Whitespace">     </span><span class="mi">32</span> 
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/settings/generic.py</span> in <span class="ni">__call__</span><span class="nt">(cls, *args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span>             <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Singleton</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span>         <span class="k">if</span> <span class="bp">cls</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">49</span>             <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">Singleton</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_instances</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> 
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/settings/generic.py</span> in <span class="ni">__init__</span><span class="nt">(self, config)</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_database_is_disabled</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_configuration</span><span class="p">[</span><span class="s2">&quot;disable_database&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span>         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">database_is_disabled</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">116</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_configuration</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_database_config</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span>                 <span class="n">config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_configuration</span>
-<span class="g g-Whitespace">    </span><span class="mi">118</span>             <span class="p">)</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/site-packages/pyiron_base/settings/generic.py</span> in <span class="ni">convert_database_config</span><span class="nt">(config)</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span>                 <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sql_file</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">492</span>             <span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">493</span>                 <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">sql_file</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">494</span>             <span class="n">config</span><span class="p">[</span>
-<span class="g g-Whitespace">    </span><span class="mi">495</span>                 <span class="s2">&quot;sql_connection_string&quot;</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/os.py</span> in <span class="ni">makedirs</span><span class="nt">(name, mode, exist_ok)</span>
-<span class="g g-Whitespace">    </span><span class="mi">211</span>     <span class="k">if</span> <span class="n">head</span> <span class="ow">and</span> <span class="n">tail</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">212</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">213</span>             <span class="n">makedirs</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="n">exist_ok</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span>         <span class="k">except</span> <span class="ne">FileExistsError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span>             <span class="c1"># Defeats race condition when another thread created the path</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/os.py</span> in <span class="ni">makedirs</span><span class="nt">(name, mode, exist_ok)</span>
-<span class="g g-Whitespace">    </span><span class="mi">211</span>     <span class="k">if</span> <span class="n">head</span> <span class="ow">and</span> <span class="n">tail</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">212</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">213</span>             <span class="n">makedirs</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="n">exist_ok</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span>         <span class="k">except</span> <span class="ne">FileExistsError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span>             <span class="c1"># Defeats race condition when another thread created the path</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/os.py</span> in <span class="ni">makedirs</span><span class="nt">(name, mode, exist_ok)</span>
-<span class="g g-Whitespace">    </span><span class="mi">211</span>     <span class="k">if</span> <span class="n">head</span> <span class="ow">and</span> <span class="n">tail</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">212</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">213</span>             <span class="n">makedirs</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="n">exist_ok</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span>         <span class="k">except</span> <span class="ne">FileExistsError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span>             <span class="c1"># Defeats race condition when another thread created the path</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/os.py</span> in <span class="ni">makedirs</span><span class="nt">(name, mode, exist_ok)</span>
-<span class="g g-Whitespace">    </span><span class="mi">211</span>     <span class="k">if</span> <span class="n">head</span> <span class="ow">and</span> <span class="n">tail</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">212</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">213</span>             <span class="n">makedirs</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="n">exist_ok</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">214</span>         <span class="k">except</span> <span class="ne">FileExistsError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">215</span>             <span class="c1"># Defeats race condition when another thread created the path</span>
-
-<span class="nn">/usr/share/miniconda/lib/python3.8/os.py</span> in <span class="ni">makedirs</span><span class="nt">(name, mode, exist_ok)</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>             <span class="k">return</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">223</span>         <span class="n">mkdir</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">224</span>     <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">225</span>         <span class="c1"># Cannot rely on checking for EEXIST, since the operating system</span>
-
-<span class="ne">PermissionError</span>: [Errno 13] Permission denied: &#39;/srv/conda&#39;
 </pre></div>
 </div>
 </div>
@@ -650,8 +525,8 @@ https://doi.org/10.1103/PhysRevLett.65.353</p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="Introduction.html" title="previous page">Introduction</a>
-    <a class='right-next' id="next-link" href="2_Simulation_Codes.html" title="next page">Welcome to the Workshop: Software Tools from Atomistics to Phase Diagrams</a>
+    <a class='left-prev' id="prev-link" href="Atomisticstructures.html" title="previous page">Atomistic Structures</a>
+    <a class='right-next' id="next-link" href="SimulationCodes.html" title="next page">Simulation Codes</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

@@ -1,0 +1,5 @@
+# Density Functional Theory
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZCVRLS4b5YU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The third interactive tutorial introduces density functional theory (DFT) based on the pyiron interface to the S/PHI/nX plane wave DFT code developed at the Max Planck Institute für Eisenforschung in Düsseldorf Germany. S/PHI/nX is used to determine the equilibrium lattice constant of aluminium at 0K by fitting the energy over volume curve for a set of eleven volume points around the equilibrium volume. The energy volume curve is first calculated using individual DFT calculation by collecting the simulation results using the pyiron tables object. Afterwards the Murnaghan ParallelMaster job type is introduced which automatically calculates the equilibrium volume, equilibrium energy, bulk modulus and the pressure derivative of the bulk modulus. These Master job types implemented in pyiron enable the construction of complex simulation protocols by combining individual steps like building blocks.  
