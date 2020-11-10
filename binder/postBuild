@@ -10,5 +10,5 @@ jupyter labextension install nglview-js-widgets
 printf "[DEFAULT]\nTOP_LEVEL_DIRS = ${HOME}\nRESOURCE_PATHS = /srv/conda/envs/notebook/share/pyiron" > ${HOME}/.pyiron
 
 # Clean up 
-rm Atomisticstructures.md LICENSE CODE_OF_CONDUCT.md README.md DensityFunctionalTheory.md SimulationCodes.md ThermodynamicProperties.md _config.yml _toc.yml Introduction.md exercise.gif
+rm Atomisticstructures.md LICENSE CODE_OF_CONDUCT.md README.md DensityFunctionalTheory.md SimulationCodes.md PhaseDiagram.md ThermodynamicProperties.md _config.yml _toc.yml Introduction.md exercise.gif
 rm -rf .git .github binder images
