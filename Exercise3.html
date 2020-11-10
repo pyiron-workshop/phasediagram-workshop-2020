@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Exercise 3: Density functional theory &#8212; Software Tools from Atomistics to Phase Diagrams</title>
+    <title>Workshop: Software Tools from Atomistics to Phase Diagrams &#8212; Software Tools from Atomistics to Phase Diagrams</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -100,7 +100,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise1.html">
-   Exercise 1: Atomistic Structures
+   Workshop: Software Tools from Atomistics to Phase Diagrams
   </a>
  </li>
  <li class="toctree-l1">
@@ -110,7 +110,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise2.html">
-   Exercise 2: Simulation Codes
+   Workshop: Software Tools from Atomistics to Phase Diagrams
   </a>
  </li>
  <li class="toctree-l1">
@@ -120,7 +120,12 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Exercise 3: Density functional theory
+   Workshop: Software Tools from Atomistics to Phase Diagrams
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#density-functional-theory">
+   Density Functional Theory
   </a>
  </li>
  <li class="toctree-l1">
@@ -130,7 +135,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise4.html">
-   Exercise 4: Thermodynamic Properties
+   Workshop: Software Tools from Atomistics to Phase Diagrams
   </a>
  </li>
  <li class="toctree-l1">
@@ -225,40 +230,54 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reminder">
-   Reminder
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Workshop: Software Tools from Atomistics to Phase Diagrams
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#day-1-atomistic-simulations-pyiron">
+     Day 1 - Atomistic simulations (pyiron)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reminder">
+     Reminder
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#density-functional-theory">
    Density Functional Theory
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#energy-volume-curve">
-   Energy Volume Curve
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Reminder
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualise-the-energy-volume-curve">
-   Visualise the energy volume curve
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pyiron-master-jobs">
-   pyiron Master Jobs
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
-   Summary
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energy-volume-curve">
+     Energy Volume Curve
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Reminder
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualise-the-energy-volume-curve">
+     Visualise the energy volume curve
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pyiron-master-jobs">
+     pyiron Master Jobs
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -271,14 +290,19 @@
         
               <div>
                 
-  <div class="section" id="exercise-3-density-functional-theory">
-<h1>Exercise 3: Density functional theory<a class="headerlink" href="#exercise-3-density-functional-theory" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="workshop-software-tools-from-atomistics-to-phase-diagrams">
+<h1><a class="reference external" href="https://workshop.materialsgenomefoundation.org">Workshop: Software Tools from Atomistics to Phase Diagrams</a><a class="headerlink" href="#workshop-software-tools-from-atomistics-to-phase-diagrams" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="day-1-atomistic-simulations-pyiron">
+<h2>Day 1 - Atomistic simulations (<a class="reference external" href="https://pyiron.org">pyiron</a>)<a class="headerlink" href="#day-1-atomistic-simulations-pyiron" title="Permalink to this headline">¶</a></h2>
+<p><strong>Authors:  <u>Jan Janssen</u>, Tilmann Hickel, Jörg Neugebauer (<a class="reference external" href="https://www.mpie.de">Max-Planck-Institut für Eisenforschung</a>)</strong></p>
+<p>Interactive: <strong>Density functional theory with pyiron</strong></p>
 <p>The scope of this first exercise is to become familar with:</p>
 <ul class="simple">
 <li><p>Density functional theory calculation,</p></li>
 <li><p>Calculate the equilibrium lattice constant</p></li>
 <li><p>Compare the results to interatomic potentials.</p></li>
 </ul>
+</div>
 <div class="section" id="reminder">
 <h2>Reminder<a class="headerlink" href="#reminder" title="Permalink to this headline">¶</a></h2>
 <p>In the first session we learned how to create a pyiron project object and then use this pyiron project object to create atomistic structure objects.</p>
@@ -286,22 +310,39 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the Project object</span>
 <span class="kn">from</span> <span class="nn">pyiron</span> <span class="kn">import</span> <span class="n">____</span>
-
-<span class="c1"># Create a Project object instance for a project named atomistics</span>
-<span class="n">pr</span> <span class="o">=</span> <span class="n">____</span><span class="p">(</span><span class="s2">&quot;simulations&quot;</span><span class="p">)</span>
-
-<span class="c1"># Create a cubic aluminum fcc structure</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Project object instance for a project named dft</span>
+<span class="n">pr</span> <span class="o">=</span> <span class="n">____</span><span class="p">(</span><span class="s2">&quot;dft&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a cubic aluminum fcc structure</span>
 <span class="n">al_fcc</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="n">____</span><span class="p">,</span> <span class="n">_____</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Confirm the final structure has 4 atoms by calculating the length of the structure object</span>
-<span class="n">____</span><span class="p">(</span><span class="n">al_fcc_repeated</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Confirm the final structure has 4 atoms by calculating </span>
+<span class="c1"># the length of the structure object</span>
+<span class="n">____</span><span class="p">(</span><span class="n">al_fcc</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+</div>
 <div class="section" id="density-functional-theory">
-<h2>Density Functional Theory<a class="headerlink" href="#density-functional-theory" title="Permalink to this headline">¶</a></h2>
+<h1>Density Functional Theory<a class="headerlink" href="#density-functional-theory" title="Permalink to this headline">¶</a></h1>
 <p>To provide a brief introduction to density functional theory (DFT) we calculate the equilibrium lattice constant for a cubic fcc aluminium structure. Besides the pseudo potential which defines the electron electron interaction, the DFT precision is dominated by the convergence parameters, namely the plane wave energy cutoff and the kpoint mesh. Both can be set in pyiron using the corresponding properties <code class="docutils literal notranslate"><span class="pre">encut</span></code> and <code class="docutils literal notranslate"><span class="pre">kpoint_mesh</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -310,21 +351,27 @@
     <span class="n">job_type</span><span class="o">=</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Sphinx</span><span class="p">,</span>
     <span class="n">job_name</span><span class="o">=</span><span class="n">________</span>
 <span class="p">)</span>
-
-<span class="c1"># Print the default DFT convergence parameters energy cutoff</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Print the default DFT convergence parameters energy cutoff</span>
 <span class="nb">print</span><span class="p">(</span>
     <span class="n">job_dft_template</span><span class="o">.</span><span class="n">encut</span><span class="p">,</span> 
     <span class="n">job_dft_template</span><span class="o">.</span><span class="n">kpoint_mesh</span>
 <span class="p">)</span>
-
-<span class="c1"># Increase the energy cutoff to 400eV and increase the kpoint mesh to 5x5x5</span>
-<span class="n">job_dft_template</span><span class="o">.</span><span class="n">set_encut</span><span class="p">(</span><span class="n">_______</span><span class="p">)</span>
-<span class="n">job_dft_template</span><span class="o">.</span><span class="n">set_kpoints</span><span class="p">([</span><span class="n">__</span><span class="p">,</span> <span class="n">__</span><span class="p">,</span> <span class="n">__</span><span class="p">])</span>
-
-<span class="c1"># Again we enable the run_mode non_modal to execute the calculation in the background</span>
-<span class="n">job_dft_template</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">run_mode</span><span class="o">.</span><span class="n">non_modal</span> <span class="o">=</span> <span class="n">______</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Increase the energy cutoff to 400eV and increase the kpoint mesh to 5x5x5</span>
+<span class="n">job_dft_template</span><span class="o">.</span><span class="n">set_encut</span><span class="p">(</span><span class="n">_______</span><span class="p">)</span>
+<span class="n">job_dft_template</span><span class="o">.</span><span class="n">set_kpoints</span><span class="p">([</span><span class="n">__</span><span class="p">,</span> <span class="n">__</span><span class="p">,</span> <span class="n">__</span><span class="p">])</span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -333,24 +380,59 @@
 <p>The discretisation of the plane waves on the fourier mesh and the kpoint mesh in the brillouin zone cause fluctuations in the energy surface. Therefore a minimization like we used it for the interatomic potentials in the previous section is insufficient. Instead we calculate the energy for various volumes around the equlibrium volume and then determine the equilibrium volume by interpolating the minimum between these volumes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We import the numerical library numpy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the numerical library numpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="c1"># We create 7 strains ranging from -5% (0.95) to +5% (1.05) </span>
-<span class="k">for</span> <span class="n">strain</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">_____</span><span class="p">,</span> <span class="n">______</span><span class="p">,</span> <span class="n">_____</span><span class="p">):</span>
-    <span class="c1"># We include the strain in the job name to identify the individual jobs </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create 7 strains ranging from -5% (-0.05) to +5% (0.05)</span>
+<span class="n">strain_lst</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">_____</span><span class="p">,</span> <span class="n">______</span><span class="p">,</span> <span class="n">_____</span><span class="p">)</span>
+<span class="n">strain_lst</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy the cubic fcc aluminium supercell</span>
+<span class="n">al_fcc_copy</span> <span class="o">=</span> <span class="n">_________</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Apply of -5% to the copy of the aluminium</span>
+<span class="c1"># supercell and compare the volume </span>
+<span class="n">al_fcc_copy</span><span class="o">.</span><span class="n">apply_strain</span><span class="p">(</span><span class="n">_____</span><span class="p">)</span>
+<span class="n">al_fcc</span><span class="o">.</span><span class="n">get_volume</span><span class="p">(),</span> <span class="n">al_fcc_copy</span><span class="o">.</span><span class="n">get_volume</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterate over the list of strains </span>
+<span class="k">for</span> <span class="n">_______</span> <span class="ow">in</span> <span class="n">strain_lst</span><span class="p">:</span> 
     <span class="n">job_strain</span> <span class="o">=</span> <span class="n">job_dft_template</span><span class="o">.</span><span class="n">copy_to</span><span class="p">(</span>
-        <span class="n">new_job_name</span><span class="o">=</span><span class="s1">&#39;spx_&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">strain</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">),</span> 
+        <span class="c1"># Define the job name based on the current strain </span>
+        <span class="n">new_job_name</span><span class="o">=</span><span class="s2">&quot;spx_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">_____</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">),</span> 
         <span class="n">new_database_entry</span><span class="o">=</span><span class="kc">False</span>
     <span class="p">)</span>
     
-    <span class="c1"># Each job we assign a copy of the cubic fcc aluminium supercell</span>
-    <span class="n">job_strain</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">_______</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="c1"># Copy the cubic fcc aluminium supercell</span>
+    <span class="n">al_fcc_copy</span> <span class="o">=</span> <span class="n">________</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
     
-    <span class="c1"># Afterwards we rescale the volume of the supercell with the selected strain</span>
-    <span class="n">job_strain</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">set_cell</span><span class="p">(</span><span class="n">cell</span><span class="o">=</span><span class="n">al_fcc</span><span class="o">.</span><span class="n">cell</span> <span class="o">*</span> <span class="n">_______</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">),</span> <span class="n">scale_atoms</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1"># Apply the strain of using the for loop</span>
+    <span class="n">al_fcc_copy</span><span class="o">.</span><span class="n">apply_strain</span><span class="p">(</span><span class="n">_____</span><span class="p">)</span>
     
-    <span class="c1"># Finally we submit the calculation for execution </span>
+    <span class="c1"># Set the strained structure to the job</span>
+    <span class="n">job_strain</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">al_fcc_copy</span> 
+    
+    <span class="c1"># Execute the job</span>
     <span class="n">job_strain</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -358,16 +440,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># While the calculations are executed in the background we check the status of the calculation in the job_table</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check the status of the calculation in the job_table</span>
 <span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We wait until all calculations are finshed </span>
-<span class="n">pr</span><span class="o">.</span><span class="n">wait_for_jobs</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -380,8 +454,14 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a pyiron table object</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
-
-<span class="c1"># Implement a filter function, which returns true for finished jobs and jobs with &quot;spx_&quot; in the job_name</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Implement a filter function, which returns true </span>
+<span class="c1"># for finished jobs and jobs with &quot;spx_&quot; in the job_name</span>
 <span class="k">def</span> <span class="nf">filter_jobs</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">job</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">_______</span> <span class="ow">and</span> <span class="n">_____</span> <span class="ow">in</span> <span class="n">job</span><span class="o">.</span><span class="n">job_name</span>
 </pre></div>
@@ -393,15 +473,30 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Many commonly used functions are already available using tab completion</span>
 <span class="c1"># We select the get_volume function and the get_energy_tot function</span>
 <span class="n">table</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">________</span>
-<span class="n">table</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">get_energy_tot</span>
-
-<span class="c1"># Assigne the filter function defined above</span>
+<span class="n">table</span><span class="o">.</span><span class="n">add</span><span class="o">.</span><span class="n">_________</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign the filter function defined above</span>
 <span class="n">table</span><span class="o">.</span><span class="n">filter_function</span> <span class="o">=</span> <span class="n">_____</span>
-
-<span class="c1"># Execute the pyiron table just like a pyiron job object</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execute the pyiron table just like a pyiron job object</span>
 <span class="n">table</span><span class="o">.</span><span class="n">_____</span>
-
-<span class="c1"># Return a pandas DataFrame with the collected results </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Return a pandas DataFrame with the collected results </span>
 <span class="n">df_res</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">get_dataframe</span><span class="p">()</span>
 <span class="n">df_res</span>
 </pre></div>
@@ -414,20 +509,42 @@
 <p>We again use the matplotlib library to visualise the calculated energy volume curve and calculate the equilibrium volume by fitting a second order polynomial and calculate the roots of the derivative.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the matplotlib library for plotting. As we are using jupyter notebooks </span>
-<span class="c1"># for combining code, documentation and visualisation, we also need the jupyter magic for matplotlib. </span>
-<span class="c1"># https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-matplotlib</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fit a second order polynomial to the energy volume curve </span>
+<span class="n">fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">_____</span><span class="o">.</span><span class="n">volume</span><span class="p">,</span> <span class="n">_____</span><span class="o">.</span><span class="n">energy_tot</span><span class="p">,</span> <span class="n">___</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the polynomial of the fit </span>
+<span class="n">fit_poly</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span>
+
+<span class="c1"># Calculate the roots of the derivate of the polynomial</span>
+<span class="n">vol_roots</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyder</span><span class="p">(</span><span class="n">fit_poly</span><span class="p">)</span><span class="o">.</span><span class="n">roots</span>
+
+<span class="c1"># Select the root within the volume range which is</span>
+<span class="c1"># smaller (&lt;) than maximum volume and larger (&gt;) than </span>
+<span class="c1"># the minimum volume. </span>
+<span class="n">vol_eq</span> <span class="o">=</span> <span class="n">vol_roots</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">vol_roots</span> <span class="n">____</span> <span class="n">df_res</span><span class="p">[</span><span class="s2">&quot;volume&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="o">&amp;</span> 
+    <span class="p">(</span><span class="n">vol_roots</span> <span class="n">____</span> <span class="n">df_res</span><span class="p">[</span><span class="s2">&quot;volume&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the matplotlib library for plotting. </span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Plot the volume and the total energy from the DataFrame with the collected results</span>
+<span class="c1"># Plot the volume and the total energy from the DataFrame </span>
+<span class="c1"># with the collected results</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">_____</span><span class="o">.</span><span class="n">volume</span><span class="p">,</span> <span class="n">_____</span><span class="o">.</span><span class="n">energy_tot</span><span class="p">)</span>
 
-<span class="c1"># Fit a second order polynomial to the energy volume curve </span>
-<span class="n">fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">_____</span><span class="o">.</span><span class="n">volume</span><span class="p">,</span> <span class="n">_____</span><span class="o">.</span><span class="n">energy_tot</span><span class="p">,</span> <span class="n">___</span><span class="p">)</span>
-
-<span class="n">vol_eq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyder</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span><span class="o">.</span><span class="n">roots</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">vol_eq</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="c1"># Plot the fitted equilibrium volume</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">______</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Volume&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;total Energy&quot;</span><span class="p">);</span>
 </pre></div>
@@ -445,23 +562,32 @@
     <span class="n">job_type</span><span class="o">=</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Sphinx</span><span class="p">,</span>
     <span class="n">job_name</span><span class="o">=</span><span class="n">______</span>
 <span class="p">)</span>
-
-<span class="c1"># Assign the cubic fcc aluminium structure to the template job </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign the cubic fcc aluminium structure to the template job </span>
 <span class="n">job_master_template</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">_____</span>
-
-<span class="c1"># Again we enable the run_mode non_modal to execute the calculation in the background</span>
-<span class="n">job_master_template</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">run_mode</span><span class="o">.</span><span class="n">non_modal</span> <span class="o">=</span> <span class="n">______</span>
-
-<span class="c1"># Use the job object to create the Murnaghan object, named &quot;murn&quot; </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the job object to create the Murnaghan object, named &quot;murn&quot; </span>
 <span class="n">murn</span> <span class="o">=</span> <span class="n">job_master_template</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span>
     <span class="n">job_type</span><span class="o">=</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Murnaghan</span><span class="p">,</span> 
     <span class="n">job_name</span><span class="o">=</span><span class="n">_______</span>
 <span class="p">)</span>
-
-<span class="c1"># Set the number of cores of the Murnaghan object to 2 so it can execute two DFT calculations at a time </span>
-<span class="n">murn</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">cores</span> <span class="o">=</span> <span class="n">_____</span>
-
-<span class="c1"># Execute the Murnaghan object </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execute the Murnaghan object </span>
 <span class="n">murn</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -469,7 +595,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># While the calculations are executed in the background we check the status of the calculation in the job_table</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check the status of the calculation in the job_table</span>
 <span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -477,15 +603,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We again wait until all calculations are finshed </span>
-<span class="n">pr</span><span class="o">.</span><span class="n">wait_for_jobs</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Finally we can use the internal functionality of the master job to visualise the energy volume curve</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Finally we can use the internal functionality of the master job </span>
+<span class="c1"># to visualise the energy volume curve</span>
 <span class="n">murn</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>

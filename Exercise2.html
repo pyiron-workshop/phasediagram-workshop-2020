@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Exercise 2: Simulation Codes &#8212; Software Tools from Atomistics to Phase Diagrams</title>
+    <title>Workshop: Software Tools from Atomistics to Phase Diagrams &#8212; Software Tools from Atomistics to Phase Diagrams</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -100,7 +100,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise1.html">
-   Exercise 1: Atomistic Structures
+   Workshop: Software Tools from Atomistics to Phase Diagrams
   </a>
  </li>
  <li class="toctree-l1">
@@ -110,7 +110,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Exercise 2: Simulation Codes
+   Workshop: Software Tools from Atomistics to Phase Diagrams
   </a>
  </li>
  <li class="toctree-l1">
@@ -120,7 +120,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise3.html">
-   Exercise 3: Density functional theory
+   Workshop: Software Tools from Atomistics to Phase Diagrams
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise3.html#density-functional-theory">
+   Density Functional Theory
   </a>
  </li>
  <li class="toctree-l1">
@@ -130,7 +135,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Exercise4.html">
-   Exercise 4: Thermodynamic Properties
+   Workshop: Software Tools from Atomistics to Phase Diagrams
   </a>
  </li>
  <li class="toctree-l1">
@@ -225,6 +230,11 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#day-1-atomistic-simulations-pyiron">
+   Day 1 - Atomistic simulations (pyiron)
+  </a>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reminder">
    Reminder
@@ -327,14 +337,19 @@
         
               <div>
                 
-  <div class="section" id="exercise-2-simulation-codes">
-<h1>Exercise 2: Simulation Codes<a class="headerlink" href="#exercise-2-simulation-codes" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="workshop-software-tools-from-atomistics-to-phase-diagrams">
+<h1><a class="reference external" href="https://workshop.materialsgenomefoundation.org">Workshop: Software Tools from Atomistics to Phase Diagrams</a><a class="headerlink" href="#workshop-software-tools-from-atomistics-to-phase-diagrams" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="day-1-atomistic-simulations-pyiron">
+<h2>Day 1 - Atomistic simulations (<a class="reference external" href="https://pyiron.org">pyiron</a>)<a class="headerlink" href="#day-1-atomistic-simulations-pyiron" title="Permalink to this headline">¶</a></h2>
+<p><strong>Authors:  <u>Jan Janssen</u>, Tilmann Hickel, Jörg Neugebauer (<a class="reference external" href="https://www.mpie.de">Max-Planck-Institut für Eisenforschung</a>)</strong></p>
+<p>Interactive: <strong>Atomistic simulations with pyiron</strong></p>
 <p>The scope of this second exercise is to become familar with:</p>
 <ul class="simple">
 <li><p>Interatomic potential calculation,</p></li>
 <li><p>the pyiron job management and</p></li>
 <li><p>the aggregation of multiple calculations.</p></li>
 </ul>
+</div>
 <div class="section" id="reminder">
 <h2>Reminder<a class="headerlink" href="#reminder" title="Permalink to this headline">¶</a></h2>
 <p>In the first session we learned how to create a pyiron project object and then use this pyiron project object to create atomistic structure objects.</p>
@@ -342,15 +357,30 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the Project object</span>
 <span class="kn">from</span> <span class="nn">pyiron</span> <span class="kn">import</span> <span class="n">____</span>
-
-<span class="c1"># Create a Project object instance for a project named atomistics</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Project object instance for a project named atomistics</span>
 <span class="n">pr</span> <span class="o">=</span> <span class="n">____</span><span class="p">(</span><span class="s2">&quot;simulations&quot;</span><span class="p">)</span>
-
-<span class="c1"># Create a cubic aluminum fcc structure and repeat it 3 times in each direction</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a cubic aluminum fcc structure and repeat it 3 times in each direction</span>
 <span class="n">al_fcc</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="n">____</span><span class="p">,</span> <span class="n">_____</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">al_fcc_repeated</span> <span class="o">=</span> <span class="n">al_fcc</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">____</span><span class="p">)</span>
-
-<span class="c1"># Confirm the final structure has 108 atoms by calculating the length of the structure object</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Confirm the final structure has 108 atoms by calculating the length of the structure object</span>
 <span class="n">____</span><span class="p">(</span><span class="n">al_fcc_repeated</span><span class="p">)</span> <span class="o">==</span> <span class="mi">108</span>
 </pre></div>
 </div>
@@ -370,19 +400,42 @@
     <span class="n">job_type</span><span class="o">=</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Lammps</span><span class="p">,</span> 
     <span class="n">job_name</span><span class="o">=</span><span class="n">____</span>
 <span class="p">)</span>
-
-<span class="c1"># Assign the fcc aluminium structure to the LAMMPS job object</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assign the fcc aluminium structure to the LAMMPS job object</span>
 <span class="n">job_md</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">_________</span>
-
-<span class="c1"># Define an ensemble with constant number of atoms, </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define an ensemble with constant number of atoms, </span>
 <span class="c1"># constant volume and a constant temperature of 500K</span>
 <span class="c1"># and simulate 10000 molecular dynamics steps</span>
 <span class="n">job_md</span><span class="o">.</span><span class="n">calc_md</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="n">______</span><span class="p">,</span> <span class="n">n_ionic_steps</span><span class="o">=</span><span class="n">______</span><span class="p">)</span>
-
-<span class="c1"># Execute the calculation </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execute the calculation - You get a warning that </span>
+<span class="c1"># not potential was set and the default potential was</span>
+<span class="c1"># used instead. The selection of interatomic potentials </span>
+<span class="c1"># is discussed below.</span>
 <span class="n">job_md</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-
-<span class="c1"># Animate the molecular dynamics trajectory</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Animate the molecular dynamics trajectory</span>
 <span class="n">job_md</span><span class="o">.</span><span class="n">animate_structure</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -404,9 +457,16 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the temperature to 800K and calculate 20000 steps</span>
+<span class="c1"># You get a warning message that the job is already finished. </span>
 <span class="n">job_md</span><span class="o">.</span><span class="n">calc_md</span><span class="p">(</span><span class="n">temperature</span><span class="o">=</span><span class="n">_____</span><span class="p">,</span> <span class="n">n_ionic_steps</span><span class="o">=</span><span class="n">_______</span><span class="p">)</span>
-
-<span class="c1"># Execute the SQS calculation by calling the run function with the delete_existing parameter set to true: </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execute the LAMMPS calculation by calling the run function </span>
+<span class="c1"># with the delete_existing parameter set to true: </span>
 <span class="n">job_md</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">delete_existing_job</span><span class="o">=</span><span class="n">______</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -418,10 +478,7 @@
 <p>In the same way we can again use matplotlib to analyse the results of our calculation. For example we can use the matplotlib library to plot the temperature over simulation steps.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the matplotlib library for plotting. As we are using jupyter notebooks </span>
-<span class="c1"># for combining code, documentation and visualisation, we also need the jupyter magic for matplotlib. </span>
-<span class="c1"># https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-matplotlib</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the matplotlib library for plotting. </span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># for the LAMMPS job object plot the temperature over simualation steps</span>
@@ -432,17 +489,26 @@
 </div>
 </div>
 </div>
+<p>In the beginning the potential energy is close to the 0K equilibrium, therefore to accelerate the equilibration the kinetic energy is set to twice the expected kinetic energy. The additional kinetic energy is transfered to the potential energy resulting in an equal distribution of potential and kinetic energy. With this trick the equilibration is accelerated. The large temperature fluctuations are related to the small number of atoms in the simulation cell.</p>
 </div>
 <div class="section" id="advanced-input-options">
 <h3>Advanced input options<a class="headerlink" href="#advanced-input-options" title="Permalink to this headline">¶</a></h3>
 <p>Besides the general functions <code class="docutils literal notranslate"><span class="pre">calc_static()</span></code>, <code class="docutils literal notranslate"><span class="pre">calc_minimize()</span></code> and <code class="docutils literal notranslate"><span class="pre">calc_md()</span></code>. pyiron also has the option to modify the input of the simulation code directly.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># change the number of simulation steps to 2000 by manually modifying the run command</span>
-<span class="n">job_md</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">control</span><span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_____</span>
-
-<span class="c1"># display the LAMMPS input file </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># display the LAMMPS input file </span>
 <span class="n">job_md</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">control</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># change the number of simulation steps to 2000 </span>
+<span class="c1"># by manually modifying the run command.</span>
+<span class="c1"># You again get a warning message that the job </span>
+<span class="c1"># is already finished. </span>
+<span class="n">job_md</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">control</span><span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">____</span>
 </pre></div>
 </div>
 </div>
@@ -450,13 +516,36 @@
 </div>
 <div class="section" id="advanced-output-options">
 <h3>Advanced output options<a class="headerlink" href="#advanced-output-options" title="Permalink to this headline">¶</a></h3>
-<p>Besides the output properties it is also possible to access the output of a calculation directly from the HDF5 file which is the hierachical file format pyiron is using to store the simulation data.</p>
+<p>Besides the output properties it is also possible to access the output of a calculation directly from the data interface which is based om the hierachical file format (HDF5) pyiron is using to store the simulation data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print the generic output stored in the HDF5 file</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">job_md</span><span class="p">[</span><span class="n">___________</span><span class="p">])</span>
-
-<span class="c1"># plot the temperature over simulation steps directly from the HDF5 file </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print content of the job object </span>
+<span class="n">job_md</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print content of the output of the job object</span>
+<span class="c1"># use strings to specify the path for the data interface </span>
+<span class="n">job_md</span><span class="p">[</span><span class="n">_______</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print content of the generic group </span>
+<span class="c1"># of the output of the job object </span>
+<span class="n">job_md</span><span class="p">[</span><span class="n">______</span><span class="o">/</span><span class="n">______</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot the temperature over simulation steps directly from the HDF5 file </span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">job_md</span><span class="p">[</span><span class="n">___________</span><span class="p">],</span> <span class="n">job_md</span><span class="p">[</span><span class="n">___________</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;timesteps&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperature&quot;</span><span class="p">);</span>
@@ -472,8 +561,13 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Decompress the LAMMPS job</span>
 <span class="n">_______</span><span class="o">.</span><span class="n">decompress</span><span class="p">()</span>
-
-<span class="c1"># Read the LAMMPS output file of the LAMMPS job</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the LAMMPS output file of the LAMMPS job</span>
 <span class="n">_______</span><span class="p">[</span><span class="s2">&quot;log.lammps&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -512,11 +606,21 @@
     <span class="n">job_type</span><span class="o">=</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">Lammps</span><span class="p">,</span> 
     <span class="n">job_name</span><span class="o">=</span><span class="n">______</span>
 <span class="p">)</span>
-
-<span class="c1"># We assign a cubic fcc aluminium supercell </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We assign a cubic fcc aluminium supercell </span>
 <span class="n">job_template</span><span class="o">.</span><span class="n">structure</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="n">_____</span><span class="p">,</span> <span class="n">_____</span><span class="p">)</span>
-
-<span class="c1"># Enable volume minimization by specifying the pressure as zero</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Enable volume minimization by specifying the pressure as zero</span>
 <span class="n">job_template</span><span class="o">.</span><span class="n">calc_minimize</span><span class="p">(</span><span class="n">pressure</span><span class="o">=</span><span class="n">_____</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -526,6 +630,14 @@
 <div class="section" id="iterate-over-interatomic-potentials">
 <h4>Iterate over interatomic potentials<a class="headerlink" href="#iterate-over-interatomic-potentials" title="Permalink to this headline">¶</a></h4>
 <p>After the template is constructed we can iterate over the database of existing interatomic potentials. In this example we limit the total umber of potentials to three to accelerate the calculations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select the first three potentials from the NIST database</span>
+<span class="n">potential_df</span><span class="p">[</span><span class="n">potential_df</span><span class="o">.</span><span class="n">Model</span> <span class="o">==</span> <span class="s2">&quot;NISTiprpy&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">Name</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">_____</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We then iterate over the first three potentials of the NIST database</span>
@@ -543,16 +655,14 @@
     
     <span class="c1"># Execute the calculation and set the delete_existing_job parameter to True</span>
     <span class="n">job_minimize</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">delete_existing_job</span><span class="o">=</span><span class="n">____</span><span class="p">)</span>
-    
-<span class="c1"># wait for all calculations to be finished</span>
-<span class="n">pr</span><span class="o">.</span><span class="n">wait_for_jobs</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># list all calculations in the current project using the project job table</span>
+<span class="n">pr</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -563,9 +673,11 @@
 <p>We validate the simulation results by confirming the calculations have been executed successfully. In this example one calculation failed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We use the pyiron job table of the project object to identify one job as aborted and two which finished successfully</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We use the pyiron job table of the project object </span>
+<span class="c1"># to validate all jobs finished successfully with </span>
+<span class="c1"># the status &quot;finished&quot;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">____</span><span class="o">.</span><span class="n">job_table</span><span class="p">()</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">_______</span><span class="p">])</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">_______</span><span class="p">])</span> <span class="o">==</span> <span class="mi">4</span>
 </pre></div>
 </div>
 </div>
@@ -576,12 +688,30 @@
 <p>Iterate over the successful calculation and compare the calculated lattice constants.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load a job object by the job name in the column job </span>
+<span class="c1"># of the pyiron job table </span>
+<span class="n">job</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">______</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print the final lattice constant </span>
+<span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/cells&quot;</span><span class="p">][</span><span class="n">______</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We iterate over the jobs in a the current project </span>
 <span class="k">for</span> <span class="n">job</span> <span class="ow">in</span> <span class="n">pr</span><span class="o">.</span><span class="n">iter_jobs</span><span class="p">():</span>
-    <span class="c1"># Filter job using only those who have the job status finished and &quot;lmp_&quot; in the job_name</span>
+    <span class="c1"># Filter job using only those who have the job status </span>
+    <span class="c1"># finished and &quot;lmp_&quot; in the job_name</span>
     <span class="k">if</span> <span class="n">job</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">_____</span> <span class="ow">and</span> <span class="n">____</span> <span class="ow">in</span> <span class="n">job</span><span class="o">.</span><span class="n">job_name</span><span class="p">:</span> 
         <span class="c1"># Print the job name and the lattice constant </span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">job_name</span><span class="p">,</span> <span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/cells&quot;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">job</span><span class="o">.</span><span class="n">job_name</span><span class="p">,</span> <span class="n">job</span><span class="p">[</span><span class="s2">&quot;output/generic/cells&quot;</span><span class="p">][</span><span class="n">_____</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -594,27 +724,63 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a pyiron table object</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_table</span><span class="p">()</span>
-
-<span class="c1"># Implement a filter function, which returns true for finished jobs and jobs with &quot;lmp_&quot; in the job_name</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Implement a filter function, which returns true </span>
+<span class="c1"># for finished jobs and jobs with &quot;lmp_&quot; in the job_name</span>
 <span class="k">def</span> <span class="nf">filter_jobs</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">job</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="n">______</span> <span class="ow">and</span> <span class="n">______</span> <span class="ow">in</span> <span class="n">job</span><span class="o">.</span><span class="n">job_name</span>
-
-<span class="c1"># Implement analysis functions, which return the job_name and the lattice constant</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Implement an analysis functions, which takes a job object</span>
+<span class="c1"># as an input and returns the lattice constant. Based on the</span>
+<span class="c1"># previous cell above to print the lattice constant.</span>
 <span class="k">def</span> <span class="nf">get_lattice_constant</span><span class="p">(</span><span class="n">job</span><span class="p">):</span> 
     <span class="k">return</span> <span class="n">_________________</span>
-
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Implement a second analysis functions, which takes a </span>
+<span class="c1"># job object as an input and returns the job_name.</span>
 <span class="k">def</span> <span class="nf">get_job_name</span><span class="p">(</span><span class="n">job</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">_________________</span>
-
-<span class="c1"># Assigne the filter functions and the analysis functions to the pyiron table object</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Assigne the filter functions and the analysis functions </span>
+<span class="c1"># to the pyiron table object</span>
 <span class="n">table</span><span class="o">.</span><span class="n">filter_function</span> <span class="o">=</span> <span class="n">filter_jobs</span>
 <span class="n">table</span><span class="o">.</span><span class="n">add</span><span class="p">[</span><span class="s2">&quot;job_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_job_name</span>
 <span class="n">table</span><span class="o">.</span><span class="n">add</span><span class="p">[</span><span class="s2">&quot;lattice_constant&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_lattice_constant</span>
-
-<span class="c1"># Execute the pyiron table just like a pyiron job object</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Execute the pyiron table just like a pyiron job object</span>
 <span class="n">table</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-
-<span class="c1"># Return a pandas DataFrame with the collected results </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Return a pandas DataFrame with the collected results </span>
 <span class="n">table</span><span class="o">.</span><span class="n">get_dataframe</span><span class="p">()</span>
 </pre></div>
 </div>
