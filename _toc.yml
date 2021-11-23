@@ -1,10 +1,10 @@
 - file: Introduction.md
 - file: Atomisticstructures.md 
-- file: Exercise1
+- file: Exercise1.ipynb
 - file: SimulationCodes.md 
-- file: Exercise2
+- file: Exercise2.ipynb
 - file: DensityFunctionalTheory.md 
-- file: Exercise3
+- file: Exercise3.ipynb
 - file: ThermodynamicProperties.md
-- file: Exercise4
+- file: Exercise4.ipynb
 - file: PhaseDiagram.md
