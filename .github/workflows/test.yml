@@ -23,13 +23,7 @@ jobs:
     - name: Build Jupyterbook
       shell: bash -l {0}
       run: |
-        echo "- file: README.md" > _toc.yml
-        echo "- file: Exercise1.ipynb" >> _toc.yml
-        echo "- file: Exercise2.ipynb" >> _toc.yml
-        echo "- file: Exercise3.ipynb" >> _toc.yml
-        echo "- file: Exercise4.ipynb" >> _toc.yml
-        cat _toc.yml
-        rm CODE_OF_CONDUCT.md LICENSE
+        rm README.md CODE_OF_CONDUCT.md
         jupyter-book build . --path-output public
     - run: mv public/_build/html public_html
     - run: touch public_html/.nojekyll
