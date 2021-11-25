@@ -1,11 +1,8 @@
 channels:
 - conda-forge
 dependencies:
-- pyiron =0.4.5
-- pyiron_base=0.3.9
+- pyiron_atomistics =0.2.30
 - lammps=2021.09.29
-- numpy=1.21.3
-- h5io=0.1.2
 - nglview=3.0.3
 - seaborn=0.11.2
 - sqsgenerator=0.0.5
