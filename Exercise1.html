@@ -1,12 +1,14 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercise 1: Atomistic Structures &#8212; Software Tools from Atomistics to Phase Diagrams</title>
     
-  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -18,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -33,19 +31,18 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -56,14 +53,14 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Simulation Codes" href="SimulationCodes.html" />
     <link rel="prev" title="Atomistic Structures" href="Atomisticstructures.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -72,27 +69,27 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="index.html">
-  
-  <img src="_static/logo_dark.png" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">Software Tools from Atomistics to Phase Diagrams</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo_dark.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Software Tools from Atomistics to Phase Diagrams</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Introduction.html">
    Introduction
   </a>
  </li>
 </ul>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Atomisticstructures.html">
    Atomistic Structures
@@ -140,6 +137,7 @@
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -155,21 +153,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -187,16 +185,16 @@
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -215,19 +213,26 @@
     </div>
 </div>
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reminder">
    Reminder
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#font-color-red-update-notice-font">
+   <font color="red">
+    Update Notice
+   </font>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -284,8 +289,8 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -313,13 +318,32 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;esc&gt;</span> <span class="pre">+</span> <span class="pre">&lt;b&gt;</span></code> - new cell below</p></li>
 </ul>
 </div>
+<div class="section" id="font-color-red-update-notice-font">
+<h2><font color='red'> Update Notice </font><a class="headerlink" href="#font-color-red-update-notice-font" title="Permalink to this headline">¶</a></h2>
+<p>Since the workshop in 2020, there have been some updates to pyiron commands, and here in the exercises new commands are used.</p>
+<p>The changes include:</p>
+<ul class="simple">
+<li><p>Now pyiron has various modules, like pyiron_atomistics, pyiron_continuum, pyiron_experimental. So we can import <code class="docutils literal notranslate"><span class="pre">Project</span></code> from <code class="docutils literal notranslate"><span class="pre">pyiron_atomistics</span></code> directly.</p></li>
+<li><p>using <code class="docutils literal notranslate"><span class="pre">pr.create</span></code> to create instances of various objects, such as structures and jobs. For example:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="o">.</span><span class="n">create</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">ase</span><span class="o">.</span><span class="n">bulk</span><span class="p">()</span> <span class="c1">## this replaces pr.create_ase_bulk()</span>
+</pre></div>
+</div>
+<p>, or</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pr</span><span class="o">.</span><span class="n">create</span><span class="o">.</span><span class="n">job</span><span class="o">.</span><span class="n">Lammps</span><span class="p">(</span><span class="s1">&#39;job_name&#39;</span><span class="p">)</span> <span class="c1">## this replaces pr.pr.create_job(job_type=pr.job_type.Lammps,&#39;job_name&#39;)</span>
+</pre></div>
+</div>
+<p>Similary, one can create pyiron tables via <code class="docutils literal notranslate"><span class="pre">pr.create.table()</span></code>.</p>
+<p>By this approach, the user easily gets the available options via autocompeletion.</p>
+<p><strong>Please note that in the video tutorials, the old commands are still presented.</strong></p>
+</div>
 <div class="section" id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>Let’s start by creating the first pyiron Project:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the Project object</span>
-<span class="kn">from</span> <span class="nn">pyiron</span> <span class="kn">import</span> <span class="n">____</span>
+<span class="kn">from</span> <span class="nn">pyiron_atomistics</span> <span class="kn">import</span> <span class="n">____</span>
 </pre></div>
 </div>
 </div>
@@ -358,7 +382,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a primitive aluminium (Al) fcc lattice: </span>
-<span class="n">al_fcc</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="n">____</span><span class="p">)</span>
+<span class="n">al_fcc</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">ase</span><span class="o">.</span><span class="n">bulk</span><span class="p">(</span><span class="n">____</span><span class="p">)</span>
 <span class="n">al_fcc</span>
 </pre></div>
 </div>
@@ -367,7 +391,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a cubic aluminium (Al) fcc lattice: </span>
-<span class="n">al_fcc_cubic</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="n">____</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">al_fcc_cubic</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">ase</span><span class="o">.</span><span class="n">bulk</span><span class="p">(</span><span class="n">____</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Visualise the cubic aluminium structure using NGLview: </span>
 <span class="n">______</span><span class="o">.</span><span class="n">plot3d</span><span class="p">()</span>
@@ -379,7 +403,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a cubic aluminium (Al) bcc lattice:</span>
-<span class="n">al_bcc_cubic</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_ase_bulk</span><span class="p">(</span><span class="n">_____</span><span class="p">,</span> <span class="n">crystalstructure</span><span class="o">=</span><span class="n">_____</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">3.2</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">al_bcc_cubic</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create</span><span class="o">.</span><span class="n">structure</span><span class="o">.</span><span class="n">ase</span><span class="o">.</span><span class="n">bulk</span><span class="p">(</span><span class="n">_____</span><span class="p">,</span> <span class="n">crystalstructure</span><span class="o">=</span><span class="n">_____</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">3.2</span><span class="p">,</span> <span class="n">cubic</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Compare the number of atoms (length of the structure object)</span>
 <span class="c1"># in the bcc lattice (2) and the fcc lattice (4):</span>
@@ -414,7 +438,7 @@
 </div>
 <div class="section" id="beyond-ase-atomic-neighbors">
 <h3>Beyond ASE - Atomic Neighbors<a class="headerlink" href="#beyond-ase-atomic-neighbors" title="Permalink to this headline">¶</a></h3>
-<p>https://wiki.fysik.dtu.dk/ase/ase/build/build.html
+<p><a class="reference external" href="https://wiki.fysik.dtu.dk/ase/ase/build/build.html">https://wiki.fysik.dtu.dk/ase/ase/build/build.html</a>
 While the ASE atoms class already provides extensive functionality to build complex structures. pyiron extends the atoms class for example by adding specialized functionality like analysing the neighbour environment:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -450,13 +474,12 @@ While the ASE atoms class already provides extensive functionality to build comp
 <div class="section" id="special-quasi-random-structures">
 <h2>Special Quasi-random Structures<a class="headerlink" href="#special-quasi-random-structures" title="Permalink to this headline">¶</a></h2>
 <p>Rather than replacing individual atoms one by one special quasi-random structures are used to have the most random configuration for a given concentration. More details about this method are available in the literature:
-https://doi.org/10.1103/PhysRevLett.65.353</p>
+<a class="reference external" href="https://doi.org/10.1103/PhysRevLett.65.353">https://doi.org/10.1103/PhysRevLett.65.353</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an SQS calculation job from the project object </span>
 <span class="c1"># named &quot;sqscalculation&quot; : </span>
-<span class="n">job_sqs</span> <span class="o">=</span> <span class="n">pr</span><span class="o">.</span><span class="n">create_job</span><span class="p">(</span>
-    <span class="n">job_type</span><span class="o">=</span><span class="n">pr</span><span class="o">.</span><span class="n">job_type</span><span class="o">.</span><span class="n">SQSJob</span><span class="p">,</span> 
+<span class="n">job_sqs</span> <span class="o">=</span> <span class="n">create</span><span class="o">.</span><span class="n">job</span><span class="o">.</span><span class="n">SQSJob</span><span class="p">(</span> 
     <span class="n">job_name</span><span class="o">=</span><span class="n">________</span>
 <span class="p">)</span>
 </pre></div>
@@ -617,15 +640,15 @@ https://doi.org/10.1103/PhysRevLett.65.353</p>
 
               </div>
               
-        </div>
-    </div>
-    
-    
-    <div class='prev-next-bottom'>
         
+        <div class='prev-next-bottom'>
+            
     <a class='left-prev' id="prev-link" href="Atomisticstructures.html" title="previous page">Atomistic Structures</a>
     <a class='right-next' id="next-link" href="SimulationCodes.html" title="next page">Simulation Codes</a>
 
+        </div>
+        
+        </div>
     </div>
     <footer class="footer mt-5 mt-md-0">
     <div class="container">
@@ -642,11 +665,9 @@ https://doi.org/10.1103/PhysRevLett.65.353</p>
 
       </div>
     </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
+  
   </body>
 </html>
